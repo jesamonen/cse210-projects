@@ -9,17 +9,15 @@ public class PromptGenerator
         "What was the best part of my day?",
         "How did I see the hand of the Lord in my life today?",
         "What was the strongest emotion I felt today?",
-        "If I had one thing I could do over today, what would it be?",
-        "What made me smile today?",
-        "What challenge did I overcome today?"
+        "If I had one thing I could do over today, what would it be?"
     };
 
     public string GetRandomPrompt()
     {
-        Random randomGenerator = new Random();
+        Random random = new Random();
 
-        int index = randomGenerator.Next(_prompts.Count);
+        int number = random.Next(_prompts.Count);
 
-        return _prompts[index];
+        return _prompts[number];
     }
 }
