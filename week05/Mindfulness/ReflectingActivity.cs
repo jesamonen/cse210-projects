@@ -22,6 +22,7 @@ public class ReflectingActivity : Activity
         Random rand = new Random();
 
         Console.WriteLine(prompts[rand.Next(prompts.Length)]);
+
         Thread.Sleep(_duration * 1000);
 
         EndActivity();

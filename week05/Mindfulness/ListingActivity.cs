@@ -15,7 +15,7 @@ public class ListingActivity : Activity
 
         List<string> items = new List<string>();
 
-        Console.WriteLine("Enter items (press Enter to stop):");
+        Console.WriteLine("Enter items (type 'done' to finish):");
 
         string item = "";
 

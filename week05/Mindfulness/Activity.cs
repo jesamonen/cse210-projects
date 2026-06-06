@@ -16,14 +16,30 @@ public class Activity
         Console.Write("\nHow many seconds? ");
         _duration = int.Parse(Console.ReadLine());
 
-        Console.WriteLine("Get Ready...");
-        Thread.Sleep(2000);
+        Console.Write("\nGet Ready... ");
+        ShowSpinner();
     }
 
     public void EndActivity()
     {
         Console.WriteLine("\nGood Job!");
         Console.WriteLine($"You completed {_duration} seconds of {_name}");
-        Thread.Sleep(2000);
+
+        Console.Write("Finishing... ");
+        ShowSpinner();
+    }
+
+    protected void ShowSpinner()
+    {
+        string[] spinner = { "|", "/", "-", "\\" };
+
+        for (int i = 0; i < 12; i++)
+        {
+            Console.Write(spinner[i % spinner.Length]);
+            Thread.Sleep(200);
+            Console.Write("\b");
+        }
+
+        Console.WriteLine();
     }
 }
